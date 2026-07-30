@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cafe Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6f8b0f4b91.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            ☕ Smart Cafe
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li>
+                <i class="fa-solid fa-mug-hot"></i>
+                Menu
+            </li>
+
+            <li>
+                <i class="fa-solid fa-cart-shopping"></i>
+                Orders
+            </li>
+
+            <li>
+                <i class="fa-solid fa-users"></i>
+                Customers
+            </li>
+
+            <li>
+                <i class="fa-solid fa-chart-line"></i>
+                Reports
+            </li>
+
+            <li>
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+    <!-- Main Content -->
+
+    <main class="content">
+
+        <header>
+
+            <div class="search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search Coffee...">
+
+            </div>
+
+            <div class="profile">
+
+                <img src="images/profile.png" alt="profile">
+
+                <span>Admin</span>
+
+            </div>
+
+        </header>
+
+
+        <!-- Stats -->
+
+        <section class="stats">
+
+            <div class="card">
+
+                <h3>Total Sales</h3>
+
+                <h1>$12,450</h1>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Orders</h3>
+
+                <h1>356</h1>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Customers</h3>
+
+                <h1>182</h1>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Products</h3>
+
+                <h1>42</h1>
+
+            </div>
+
+        </section>
+
+
+        <!-- Categories -->
+
+        <section class="categories">
+
+            <button class="active">All</button>
+
+            <button>Espresso</button>
+
+            <button>Latte</button>
+
+            <button>Mocha</button>
+
+            <button>Tea</button>
+
+        </section>
+
+
+        <!-- Product Area -->
+
+        <div class="body">
+
+            <section class="products">
+
+                <div class="product">
+
+                    <img src="images/espresso.png">
+
+                    <h3>Espresso</h3>
+
+                    <p>$4.50</p>
+
+                    <button>Add to Cart</button>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="images/latte.png">
+
+                    <h3>Latte</h3>
+
+                    <p>$5.50</p>
+
+                    <button>Add to Cart</button>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="images/cappuccino.png">
+
+                    <h3>Cappuccino</h3>
+
+                    <p>$6.00</p>
+
+                    <button>Add to Cart</button>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="images/mocha.png">
+
+                    <h3>Mocha</h3>
+
+                    <p>$6.50</p>
+
+                    <button>Add to Cart</button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Cart -->
+
+            <aside class="cart">
+
+                <h2>Your Order</h2>
+
+                <div id="cartItems">
+
+                    <p>No Items Added</p>
+
+                </div>
+
+                <div class="total">
+
+                    <h3>Total</h3>
+
+                    <span id="total">$0.00</span>
+
+                </div>
+
+                <button id="checkout">
+
+                    Checkout
+
+                </button>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
