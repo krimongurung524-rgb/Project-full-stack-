@@ -6,5 +6,5 @@ orderBtn.addEventListener("click", () => {
 });
 
 loginBtn.addEventListener("click", () => {
-    alert("Login page coming soon...");
+    window.location.href = "login.html";
 });
