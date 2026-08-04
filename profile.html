@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cafe | My Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6f8b0f4b91.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">☕ Smart Cafe</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="orders.html">My Orders</a>
+        <a href="profile.html" class="active">Profile</a>
+        <a href="cart.html" id="cartLink"><i class="fa-solid fa-cart-shopping"></i> Cart (<span id="cartCount">0</span>)</a>
+        <button id="logoutBtn">Logout</button>
+    </nav>
+</header>
+
+<section class="menu-page">
+    <h1>My Profile</h1>
+
+    <div id="errorBox" class="error-box"></div>
+    <div id="successBox" class="success-banner" style="display:none;"></div>
+
+    <form id="profileForm" class="profile-form">
+        <label>Username</label>
+        <input type="text" id="username" disabled>
+
+        <label>Role</label>
+        <input type="text" id="role" disabled>
+
+        <label>First Name</label>
+        <input type="text" id="first_name">
+
+        <label>Last Name</label>
+        <input type="text" id="last_name">
+
+        <label>Email</label>
+        <input type="email" id="email">
+
+        <label>Phone</label>
+        <input type="text" id="phone">
+
+        <label>Address</label>
+        <input type="text" id="address">
+
+        <button type="submit">Save Changes</button>
+    </form>
+
+    <h2>Change Password</h2>
+    <form id="passwordForm" class="profile-form">
+        <label>Current Password</label>
+        <input type="password" id="old_password" required>
+        <label>New Password</label>
+        <input type="password" id="new_password" required>
+        <button type="submit">Update Password</button>
+    </form>
+</section>
+
+<script src="js/config.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>
