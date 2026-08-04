@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cafe | Register</title>
+
+    <link rel="stylesheet" href="css/login.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6f8b0f4b91.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+
+        <div class="overlay">
+
+            <h1>☕ Smart Cafe</h1>
+
+            <p>
+                Join Us Today!
+            </p>
+
+            <span>
+                Fresh Coffee • Fast Service • Easy Ordering
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="right">
+
+        <form id="registerForm">
+
+            <h2>Create Account</h2>
+
+            <div id="errorBox" class="error-box"></div>
+
+            <div class="inputBox">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+
+            <div class="inputBox">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="inputBox">
+                <i class="fa-solid fa-phone"></i>
+                <input type="text" id="phone" placeholder="Phone Number">
+            </div>
+
+            <div class="inputBox">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password" placeholder="Password" required>
+                <i class="fa-solid fa-eye" id="togglePassword"></i>
+            </div>
+
+            <button type="submit">
+                Register
+            </button>
+
+            <p class="register">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/register.js"></script>
+
+</body>
+
+</html>
