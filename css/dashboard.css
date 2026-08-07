@@ -328,3 +328,141 @@ header{
 #checkout:hover{
     background:#f57c00;
 }
+/* ==========================
+   NEW: TABBED PANELS & DATA TABLES
+========================== */
+
+.sidebar li{
+cursor:pointer;
+}
+
+.panel{
+margin-top:10px;
+}
+
+.section-title{
+font-size:20px;
+margin:30px 0 15px;
+}
+
+.panel-toolbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:15px;
+margin-bottom:20px;
+flex-wrap:wrap;
+}
+
+.panel-toolbar input, .panel-toolbar select{
+padding:10px 16px;
+border-radius:20px;
+border:1px solid #ddd;
+font-family:'Poppins',sans-serif;
+min-width:220px;
+}
+
+.primary-btn{
+padding:10px 20px;
+background:#ff7a00;
+color:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
+font-family:'Poppins',sans-serif;
+}
+
+.secondary-btn{
+padding:10px 20px;
+background:white;
+color:#333;
+border:1px solid #ccc;
+border-radius:20px;
+cursor:pointer;
+font-family:'Poppins',sans-serif;
+}
+
+.inline-form{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+align-items:center;
+background:white;
+padding:18px;
+border-radius:14px;
+margin-bottom:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.inline-form input, .inline-form select{
+padding:10px 14px;
+border-radius:10px;
+border:1px solid #ddd;
+font-family:'Poppins',sans-serif;
+}
+
+.checkbox-label{
+display:flex;
+align-items:center;
+gap:6px;
+font-size:14px;
+}
+
+.data-table{
+width:100%;
+border-collapse:collapse;
+background:white;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.data-table th, .data-table td{
+padding:14px 16px;
+text-align:left;
+border-bottom:1px solid #f1f1f1;
+font-size:14px;
+}
+
+.data-table th{
+background:#FFF0E4;
+color:#ff7a00;
+font-weight:600;
+}
+
+.icon-btn{
+border:none;
+background:#f5f5f5;
+width:32px;
+height:32px;
+border-radius:8px;
+cursor:pointer;
+margin-right:6px;
+}
+
+.icon-btn.danger{
+background:#fde3e3;
+color:#e74c3c;
+}
+
+.status-pill{
+padding:4px 12px;
+border-radius:20px;
+font-size:12px;
+color:white;
+text-transform:capitalize;
+}
+
+.status-pending{background:#f39c12;}
+.status-preparing{background:#3498db;}
+.status-ready{background:#9b59b6;}
+.status-completed{background:#27ae60;}
+.status-cancelled{background:#e74c3c;}
+
+.status-select{
+padding:6px 10px;
+border-radius:8px;
+border:1px solid #ddd;
+font-family:'Poppins',sans-serif;
+text-transform:capitalize;
+}

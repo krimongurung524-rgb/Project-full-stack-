@@ -272,3 +272,13 @@ width:100%;
 }
 
 }
+.error-box{
+display:none;
+background:#ffe1e1;
+color:#c0392b;
+padding:10px 14px;
+border-radius:8px;
+font-size:14px;
+margin-bottom:15px;
+border:1px solid #f5b7b1;
+}

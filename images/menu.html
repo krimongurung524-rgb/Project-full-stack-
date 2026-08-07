@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cafe | Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6f8b0f4b91.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">☕ Smart Cafe</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="orders.html">My Orders</a>
+        <a href="about.html">About</a>
+        <a href="cart.html" id="cartLink"><i class="fa-solid fa-cart-shopping"></i> Cart (<span id="cartCount">0</span>)</a>
+        <button id="loginBtn">Login</button>
+    </nav>
+</header>
+
+<section class="menu-page">
+
+    <h1>Our Menu</h1>
+
+    <div class="menu-controls">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search coffee...">
+        </div>
+        <div class="category-filters" id="categoryFilters">
+            <button class="active" data-category="">All</button>
+        </div>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+        <p class="loading-text">Loading menu...</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Smart Cafe. All Rights Reserved.</p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

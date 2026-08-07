@@ -1,5 +1,7 @@
-const form = document.getElementById("loginForm");
+const form = document.getElementById("registerForm");
+const username = document.getElementById("username");
 const email = document.getElementById("email");
+const phone = document.getElementById("phone");
 const password = document.getElementById("password");
 const toggle = document.getElementById("togglePassword");
 const errorBox = document.getElementById("errorBox");
@@ -25,47 +27,37 @@ form.addEventListener("submit", async (e) => {
     e.preventDefault();
     errorBox.style.display = "none";
 
-    if (email.value === "" || password.value === "") {
-        showError("Please fill all fields.");
-        return;
-    }
-
     const submitBtn = form.querySelector("button[type=submit]");
     submitBtn.disabled = true;
-    submitBtn.textContent = "Logging in...";
+    submitBtn.textContent = "Creating account...";
 
     try {
-        // our backend authenticates by username, so we treat the email field's
-        // local-part as a fallback if the user types a username instead of email
-        const res = await fetch(API_BASE + "/auth/login/", {
+        const res = await fetch(API_BASE + "/auth/register/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ username: email.value.trim(), password: password.value }),
+            body: JSON.stringify({
+                username: username.value.trim(),
+                email: email.value.trim(),
+                phone: phone.value.trim(),
+                password: password.value,
+            }),
         });
 
+        const data = await res.json();
+
         if (!res.ok) {
-            showError("Invalid email/username or password.");
+            const firstError = Object.values(data)[0];
+            showError(Array.isArray(firstError) ? firstError[0] : "Registration failed. Please check your details.");
             return;
         }
 
-        const data = await res.json();
-        saveTokens(data.access, data.refresh);
-
-        const meRes = await fetch(API_BASE + "/auth/me/", {
-            headers: { Authorization: "Bearer " + data.access },
-        });
-        const me = await meRes.json();
-        localStorage.setItem("user", JSON.stringify(me));
-
-        if (["admin", "cashier", "staff"].includes(me.role)) {
-            window.location.href = "dashboard.html";
-        } else {
-            window.location.href = "menu.html";
-        }
+        saveTokens(data.tokens.access, data.tokens.refresh);
+        localStorage.setItem("user", JSON.stringify(data.user));
+        window.location.href = "menu.html";
     } catch (err) {
         showError("Could not connect to the server. Is the backend running?");
     } finally {
         submitBtn.disabled = false;
-        submitBtn.textContent = "Login";
+        submitBtn.textContent = "Register";
     }
 });
